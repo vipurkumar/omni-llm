@@ -26,6 +26,10 @@ dev = [
     "httpx>=0.27",
 ]
 
+[tool.setuptools.packages.find]
+include = ["model*", "tokenizer*", "data*", "training*", "server*", "evals*"]
+exclude = ["extension*", "tests*"]
+
 [tool.ruff]
 line-length = 100
 target-version = "py312"
